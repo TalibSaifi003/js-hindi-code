@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black, body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+function addLanguage(langName){
+    const li = document.createElement('li');
+    li.innerHTML=`${langName}`;
+    document.querySelector('.language').appendChild(li);
+}
+addLanguage("Python");
+addLanguage("Java");
+//optimized code
+
+function addOpti(langName){
+    const li =document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li)
+}
+addOpti('Adding')
+
+
+//edit
+const secondLang =document.querySelector('li:nth-child(2)');
+//secondLang.innerHTML='Mojo'
+const newLi=document.createElement('li');
+newLi.textContent='Mojo';
+secondLang.replaceWith(newLi);
+//second type to edit element
+const fistLang=document.querySelector("li:first-child")
+fistLang.outerHTML= '<li>TypeScipt</li>';
+
+//remove
+const lastLang=document.querySelector('li:last-child');
+lastLang.remove();
+
+
+
+</script>
+</html>

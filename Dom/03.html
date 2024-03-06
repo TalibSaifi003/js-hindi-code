@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black, body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+
+const div = document.createElement('div');
+console.log(div);
+div.className="main";
+//div.id='myid';
+div.id=Math.round(Math.random()*10+1);
+div.setAttribute('title','genratedTitle');
+div.style.backgroundColor='green';
+//div.innerText='Chai or code';
+const addText=document.createTextNode("Chai Aur code");
+div.appendChild(addText)
+
+document.body.appendChild(div);
+</script>
+</html>
